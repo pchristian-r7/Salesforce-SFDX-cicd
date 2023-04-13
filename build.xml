@@ -1,0 +1,27 @@
+<project name="Sample deploy. Change credentials as needed." 
+  default="baseDeploy" basedir="." xmlns:sf="antlib:com.salesforce">
+
+  <target name="baseDeploy">
+    <sf:deploy 
+      username="USERNAME" 
+      password="PASSWORD" 
+      serverurl="https://test.salesforce.com"  
+      pollWaitMillis="20000"
+      maxPoll="900"               
+      deployroot="force-app_convert">
+    </sf:deploy>
+  </target>
+
+  <target name="testDeploy">
+    <sf:deploy 
+      username="USERNAME" 
+      password="PASSWORD" 
+      serverurl="https://test.salesforce.com"
+      testLevel="RunLocalTests"
+      pollWaitMillis="20000"
+      maxPoll="900"
+      deployroot="force-app_convert">
+    </sf:deploy>
+  </target>
+  
+</project>

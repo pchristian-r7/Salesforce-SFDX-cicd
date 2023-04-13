@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Since this is just test to test the CI/CD wiring, let's just deploy a single class -->
+    <types>
+        <members>*</members>
+	<name>ApexClass</name>
+    </types>
+   <version>51.0</version>
+</Package>
